@@ -4,14 +4,19 @@
         <title>Milena Palijan Portfolio</title>
         <style>
             body {
-                background-color:maroon;
-                color:darkred;
-                font-family: monospace;
+                background-color: #f9f9f9;
+                color:#333;
+                font-family: 'Segoe UI', sans-serif;
             }
             a {
                 background-color: bisque;
                 color:hotpink;
                 font-family: monospace;
+                transition: background-color 0.3s, color 0.3s;
+            }
+            a:hover {
+                background-color: #ffe0b2;
+                color: #c2185b;
             }
             section {
                 background-color: pink;
@@ -34,7 +39,7 @@
             }
             ul{
                 list-style-type: none;
-                margin-left: -5%;
+                margin-left: 0;
             }
             .project-item {
                 background-color: white;
@@ -50,30 +55,91 @@
                 text-decoration: none;
                 margin-top: 4px;
             }
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 16px;
+                padding: 0;
+            }
+            nav {
+                background-color: #fff;
+                padding: 12px 16px;
+                text-align: center;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                margin-bottom: 24px;
+            }
+            nav a {
+                margin: 0 12px;
+                font-weight: 600;
+                text-decoration: none;
+            }
+            .contact-link:hover {
+                background-color: #ffdab9;
+                color: darkred;
+            }
+            .project-item img {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+            ul.skills-list {
+                list-style: none;
+                padding-left: 0;
+            }
+            ul.skills-list li {
+                position: relative;
+                padding-left: 24px;
+                margin-bottom: 8px;
+                font-weight: 600;
+            }
+            ul.skills-list li::before {
+                content: "➤";
+                position: absolute;
+                left: 0;
+                color: hotpink;
+                font-weight: bold;
+            }
+            .project-item img {
+                width: 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+                border-radius: 8px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .project-item img:hover {
+                transform: scale(1.05);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
         </style>
     </head>
         <body>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#projects">Projects</a>
+            </nav>
             <main>
-                <section>
+                <section id="about">
                     <h1>About me</h1>
                     <p>My name is <strong>Milena Palijan</strong> and I am an <strong>IT specialist</strong> from Vukovar, Croatia.</p>
                     <p>My skills include:</p>
-                    <ul>
+                    <ul class="skills-list">
                         <li>Networking</li>
                         <li>Hardware & Software Troubleshooting</li>
                         <li>Helpdesk</li>
                         <li>Active Directory</li>
                     </ul>
                 </section>
-                <section>
+                <section id="contact">
                     <h1>Contact me</h1>
-                        <a href="mailto:ivandicmilena@gmail.com" class="contact-link">Send mail</a><br>
-                        <a href="tel:+385914798222" class="contact-link">Call me</a><br>
+                        <a href="mailto:ivandicmilena@gmail.com" class="contact-link">Send mail</a>
+                        <a href="tel:+385914798222" class="contact-link">Call me</a>
                         <a href="https://hr.linkedin.com/in/milena-palijan-2b512b2b4" class="contact-link" target="_blank">LinkedIn Profile</a>
                 </section>
-                <section>
+                <section id="projects">
                     <h1>Projects</h1>
-                    <ul>
+                    <ul class="projects-grid">
                         <li class="project-item">
                             <div><img src="./media/SS_search.png" alt="Screenshot of search website"></div>
                             <div><a href="6J22ZbtU5uzQMs3BvzcstZG6PvdanucZgeQ8J1Z5z5RV">Search</a></div>
