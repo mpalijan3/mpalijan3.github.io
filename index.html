@@ -34,47 +34,60 @@
             }
             ul{
                 list-style-type: none;
+                margin-left: -5%;
+            }
+            .project-item {
+                background-color: white;
+                padding: 8px;
+                margin-bottom: 12px;
+                border-radius: 8px;
+            }
+            .contact-link {
+                display: inline-block;
+                padding: 6px 12px;
+                background-color: bisque;
+                color: darkmagenta;
+                text-decoration: none;
+                margin-top: 4px;
             }
         </style>
     </head>
-    <main>
         <body>
-            <section>
-                <h1>About me</h1>
-                <p>My name is <strong>Milena Palijan</strong> and I am an <strong>IT specialist</strong> from Vukovar, Croatia.</p>
-                <p>My skills include:</p>
-                <ul>
-                    <li>Networking</li>
-                    <li>Hardware & Software Troubleshooting</li>
-                    <li>Helpdesk</li>
-                    <li>Active Directory</li>
-                </ul>
-            </section>
-            <section>
-                <h1>Contact me</h1>
-                    <a href="mailto:ivandicmilena@gmail.com">Send mail</a><br>
-                    <a href="tel:+385914798222">Call me</a><br>
-                    <a href="https://hr.linkedin.com/in/milena-palijan-2b512b2b4" target="_blank">LinkedIn Profile</a>
-            </section>
-            <section>
-                <h1>Projects</h1>
-                <ul>
-                    <li>
-                        <div><img src="./media/SS_search.png" alt="Screenshot of search website"></div>
-                        <div>Search</div>
-                    </li>
-                    <br>
-                    <li>
-                        <div></div><img src="./media/SS_web_shop.png" alt="Screenshot of web shop"></div>
-                        <div>Web Shop</div>
-                    </li>
-                    <br>
-                    <li>
-                        <div><img src="./media/SS_company_website.png" alt="Screenshot of company website website"></div>
-                        <div>Company Website</div>
-                    </li>
-                </ul>
-            </section>
+            <main>
+                <section>
+                    <h1>About me</h1>
+                    <p>My name is <strong>Milena Palijan</strong> and I am an <strong>IT specialist</strong> from Vukovar, Croatia.</p>
+                    <p>My skills include:</p>
+                    <ul>
+                        <li>Networking</li>
+                        <li>Hardware & Software Troubleshooting</li>
+                        <li>Helpdesk</li>
+                        <li>Active Directory</li>
+                    </ul>
+                </section>
+                <section>
+                    <h1>Contact me</h1>
+                        <a href="mailto:ivandicmilena@gmail.com" class="contact-link">Send mail</a><br>
+                        <a href="tel:+385914798222" class="contact-link">Call me</a><br>
+                        <a href="https://hr.linkedin.com/in/milena-palijan-2b512b2b4" class="contact-link" target="_blank">LinkedIn Profile</a>
+                </section>
+                <section>
+                    <h1>Projects</h1>
+                    <ul>
+                        <li class="project-item">
+                            <div><img src="./media/SS_search.png" alt="Screenshot of search website"></div>
+                            <div><a href="6J22ZbtU5uzQMs3BvzcstZG6PvdanucZgeQ8J1Z5z5RV">Search</a></div>
+                        </li>
+                        <li class="project-item">
+                            <div><img src="./media/SS_web_shop.png" alt="Screenshot of web shop"></div>
+                            <div><a href="https://mpalijan3.github.io/algebra-web-shop/">Web Shop</a></div>
+                        </li>
+                        <li class="project-item">
+                            <div><img src="./media/SS_company_website.png" alt="Screenshot of company website website"></div>
+                            <div><a href="https://mpalijan3.github.io/algebra-search/search.html">Company Website</a></div>
+                        </li>
+                    </ul>
+                </section>
+            </main>
         </body>
-    </main>
 </html>
