@@ -55,10 +55,6 @@
                 aspect-ratio: 16 / 9;
                 object-fit: cover;
             }
-            ul{
-                list-style-type: none;
-                margin-left: 0;
-            }
             .project-item {
                 background-color: white;
                 padding: 8px;
@@ -183,13 +179,6 @@
                 margin-bottom: 6px;
                 color: #c2185b;
             }
-            .input {
-                padding: 10px;
-                border-radius: 6px;
-                border: 1px solid #ffb6c1;
-                background-color: #ffe4e1;
-                font-size: 1em;
-            }
             .input:focus {
                 outline: none;
                 border-color: palevioletred;
@@ -283,6 +272,37 @@
             }
             .inquiry-form button:hover {
             background-color: violet;
+            }
+            .gdpr-fieldset {
+            border: none;
+            padding: 0;
+            margin: 16px 0;
+            }
+            .gdpr-fieldset legend {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #c2185b;
+            font-size: 1em;
+            }
+            .gdpr-fieldset label.checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 14px;
+            color: #444;
+            }
+            .gdpr-fieldset input[type="checkbox"] {
+            margin-top: 3px;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            }
+            .gdpr-fieldset a {
+            color: #007bff;
+            text-decoration: underline;
+            }
+            .gdpr-fieldset a:hover {
+            color: #0056b3;
             }
         </style>
     </head>
@@ -378,11 +398,11 @@
                 <section id="request">
                     <h2>Request a quote for your project</h2>
                     <form class="quote_form">
-                        <div class="form_group">
+                        <div class="form-group">
                             <label for="name">Your first and last name:</label>
                             <input class="input" type="text" id="name" name="full_name" required>
                         </div>
-                        <div>
+                        <div class="form-group">
                             <label for="title">Your title:</label>
                             <select class="input" id="title" name="title" required>
                                 <option value="" disabled selected>Select</option>
@@ -391,7 +411,7 @@
                                 <option value="ms">Ms.</option>
                             </select>
                         </div>
-                        <div class="form_group">
+                        <div class="form-group">
                             <button class="submit_button" type="submit">Send request</button>
                         </div>
                     </form>
@@ -436,10 +456,13 @@
                         <label><input type="radio" name="service" value="design" required /> Design</label>
                         <label><input type="radio" name="service" value="development" /> Development</label>
                         </fieldset>
+                       <fieldset class="gdpr-fieldset">
+                        <legend>Privacy consent</legend>
                         <label class="checkbox">
-                        <input type="checkbox" required />
-                        I agree to the processing of my personal data in accordance with the <a href="/privacy-policy" target="_blank">Privacy Policy</a> and the General Data Protection Regulation (GDPR).   Slažem se s politikom privatnosti i obradom osobnih podataka u skladu s GDPR-om.
+                            <input type="checkbox" name="gdpr" required>
+                            I agree to the processing of my personal data according to the <a href="privacy-policy.html" target="_blank">Privacy Policy</a>.
                         </label>
+                        </fieldset>
                         <button type="submit">Send</button>
                     </form>
                     </div>
