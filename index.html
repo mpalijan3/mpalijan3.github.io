@@ -36,6 +36,15 @@
                 margin-right: auto;
                 max-width: 768px;
             }
+            footer {
+                text-align: center;
+                padding: 24px 0;
+                background-color: palevioletred;
+                color: white;
+                margin-top: 32px;
+                border-radius: 12px 12px 0 0;
+                font-size: 0.9em;
+            }
             .header {
                 background-color: palevioletred;
                 color: #f9f9f9;
@@ -120,6 +129,36 @@
                 transform: scale(1.05);
                 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                background-color: white;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+                margin-top: 12px;
+            }
+            thead{
+                background-color: palevioletred;
+                color: white;
+            }
+            th, td {
+                padding: 12px 16px;
+                text-align: center;
+                border-bottom: 1px solid #f0c0d0;
+            }
+            tbody tr:hover {
+                background-color: #fff0f5;
+            }
+            th:first-child,
+            td:first-child {
+                text-align: left;
+                background-color: #ffe4e1;
+                font-weight: bold;
+            }
+            tfoot td {
+                font-weight: bold;
+            }
         </style>
     </head>
         <body>
@@ -165,6 +204,50 @@
                             <div><a href="https://mpalijan3.github.io/algebra-search/search.html">Company Website</a></div>
                         </li>
                     </ul>
+                </section>
+                <section>
+                    <h2>Price list</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Q1.</th>
+                                <th>Q2.</th>
+                                <th>Q3.</th>
+                                <th>Q4.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Hour</th>
+                                <td>20</td>
+                                <td>22</td>
+                                <td>18</td>
+                                <td>25</td>
+                            </tr>
+                             <tr>
+                                <th>Day</th>
+                                <td>68</td>
+                                <td>75</td>
+                                <td>72</td>
+                                <td>65</td>
+                            </tr>
+                             <tr>
+                                <th>Week</th>
+                                <td>120</td>
+                                <td>122</td>
+                                <td>118</td>
+                                <td>125</td>
+                            </tr>
+                             <tr>
+                                <th>Month</th>
+                                <td>350</td>
+                                <td>345</td>
+                                <td>340</td>
+                                <td>355</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
             </main>
             <footer class="wrapper">
