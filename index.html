@@ -159,6 +159,131 @@
             tfoot td {
                 font-weight: bold;
             }
+            .input {
+                width: 100%;
+                border-radius: 3px;
+                border: none;
+                background-color: palevioletred;
+                color: black;
+            }
+            form.quote_form {
+                background-color: #fff0f5;
+                padding: 16px;
+                border-radius: 12px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+                margin-top: 12px;
+            }
+            .form-group {
+                margin-bottom: 16px;
+                display: flex;
+                flex-direction: column;
+            }
+            .form-group label {
+                font-weight: bold;
+                margin-bottom: 6px;
+                color: #c2185b;
+            }
+            .input {
+                padding: 10px;
+                border-radius: 6px;
+                border: 1px solid #ffb6c1;
+                background-color: #ffe4e1;
+                font-size: 1em;
+            }
+            .input:focus {
+                outline: none;
+                border-color: palevioletred;
+                box-shadow: 0 0 0 3px rgba(216,112,147, 0.2);
+            }
+            .submit-button {
+                background-color: palevioletred;
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+            }
+            .submit-button:hover {
+                background-color: #c2185b;
+            }
+            .form-wrapper {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            font-family: sans-serif;
+            }
+            .form-wrapper h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            }
+            .inquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            }
+            .inquiry-form label {
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            color: #444;
+            }
+            .inquiry-form input[type="text"],
+            .inquiry-form input[type="email"],
+            .inquiry-form select,
+            .inquiry-form textarea {
+            padding: 10px 14px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: border 0.2s ease;
+            }
+            .inquiry-form input:focus,
+            .inquiry-form select:focus,
+            .inquiry-form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            }
+            .inquiry-form fieldset {
+            border: none;
+            padding: 0;
+            }
+            .inquiry-form fieldset legend {
+            font-weight: bold;
+            margin-bottom: 8px;
+            }
+            .inquiry-form fieldset label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-right: 20px;
+            font-size: 14px;
+            }
+            .inquiry-form .checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+            }
+            .inquiry-form button {
+            background-color: rebeccapurple;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            }
+            .inquiry-form button:hover {
+            background-color: violet;
+            }
         </style>
     </head>
         <body>
@@ -249,6 +374,75 @@
                             </tr>
                         </tbody>
                     </table>
+                </section>
+                <section id="request">
+                    <h2>Request a quote for your project</h2>
+                    <form class="quote_form">
+                        <div class="form_group">
+                            <label for="name">Your first and last name:</label>
+                            <input class="input" type="text" id="name" name="full_name" required>
+                        </div>
+                        <div>
+                            <label for="title">Your title:</label>
+                            <select class="input" id="title" name="title" required>
+                                <option value="" disabled selected>Select</option>
+                                <option value="mr">Mr.</option>
+                                <option value="mrs">Mrs.</option>
+                                <option value="ms">Ms.</option>
+                            </select>
+                        </div>
+                        <div class="form_group">
+                            <button class="submit_button" type="submit">Send request</button>
+                        </div>
+                    </form>
+                </section>
+                <section>
+                    <div class="form-wrapper">
+                    <h2>Ask me</h2>
+                    <form class="inquiry-form">
+                        <label>
+                        Full name
+                        <input type="text" name="fullname" required />
+                        </label>
+                        <label>
+                        Title
+                        <select name="title" required>
+                            <option value="">Odaberi...</option>
+                            <option value="mr">Mr</option>
+                            <option value="mrs">Mrs</option>
+                            <option value="sir">Sir</option>
+                            <option value="madam">Madam</option>
+                        </select>
+                        </label>
+                        <label>
+                        Email address
+                        <input type="email" name="email" required />
+                        </label>
+                        <label>
+                        Project description
+                        <textarea name="description" rows="4" required></textarea>
+                        </label>
+                        <label>
+                        Budget
+                        <select name="budget" required>
+                            <option value="">Choose</option>
+                            <option value="<10k">&lt; 10.000 €</option>
+                            <option value="10-100k">10.000 – 100.000 €</option>
+                            <option value=">100k">&gt; 100.000 €</option>
+                        </select>
+                        </label>
+                        <fieldset>
+                        <legend>Service</legend>
+                        <label><input type="radio" name="service" value="design" required /> Design</label>
+                        <label><input type="radio" name="service" value="development" /> Development</label>
+                        </fieldset>
+                        <label class="checkbox">
+                        <input type="checkbox" required />
+                        I agree to the processing of my personal data in accordance with the <a href="/privacy-policy" target="_blank">Privacy Policy</a> and the General Data Protection Regulation (GDPR).   Slažem se s politikom privatnosti i obradom osobnih podataka u skladu s GDPR-om.
+                        </label>
+                        <button type="submit">Send</button>
+                    </form>
+                    </div>
                 </section>
             </main>
             <footer class="wrapper">
